@@ -99,6 +99,9 @@ nav {
   font-weight: 100;
   font-size: 3rem;
 }
+.name {
+  white-space: nowrap;
+}
 
 .banner h3 {
   font-weight: 300;
@@ -311,7 +314,7 @@ footer {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 600px){
   .wide-padding {
     padding: 0 5%;
   }
@@ -333,8 +336,7 @@ footer {
     padding: 0;
     margin-top: 1rem;
   }
-  /* ME 
-   */
+  
    .Protfolio-section{
    clip-path: none;
    margin: 0;
@@ -346,6 +348,22 @@ footer {
 
    .contact-from{
     width: 100%;
+   }
+
+   .banner{
+    display: flex;
+    justify-content: center;
+    min-height: 50vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+   }
+
+   .banner-img {
+    display: none;
+   }
+   .intro{
+    margin-bottom: 6rem;
    }
   
 }
