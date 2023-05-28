@@ -16,15 +16,22 @@
       <header>
         <section class="header-container">
           <div class="header-content">
-            <nav>
+            <nav class="navbar">
+              <!-- LOGO -->
               <div class="logo">
                 <i class="fa-solid fa-ruble-sign"></i>
               </div>
-              <ul class="menu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+              <ul class="nav-links">
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="menu">
+                  <li><a href="/" class="active">Home</a></li>
+                  <li><a href="#about">About</a></li>
+
+                  <li><a href="#protfolio">Protfolio</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </div>
               </ul>
             </nav>
 
@@ -43,7 +50,7 @@
       </header>
 
       <main>
-        <section class="about-container wide-padding">
+        <section class="about-container wide-padding" id="about">
           <div class="about-img">
             <img
               src="images/farshid-moghadam-kl19eQHULDE-unsplash.jpg"
@@ -78,8 +85,7 @@
           </div>
         </section>
 
-      
-       <section class="services wide-padding">
+        <section class="services wide-padding">
           <div class="services-column">
             <div class="service">
               <h3><i class="fa-solid fa-desktop"></i>Web Desigh</h3>
@@ -106,8 +112,8 @@
             </div>
           </div>
         </section>
-       
-         <section class="Protfolio-section">
+
+        <section class="Protfolio-section" id="protfolio">
           <div class="protfolio wide-padding">
             <h3>Protfolio</h3>
             <div class="line"></div>
@@ -138,7 +144,7 @@
           </div>
         </section>
 
-      <section class="contact-section wide-padding">
+        <section class="contact-section wide-padding" id="contact">
           <h1>Get in Touch</h1>
           <div class="contact-content">
             <div class="address">
@@ -190,7 +196,7 @@
           <p>&copy;RockSter 2023 | Made with ❤️ by Basir</p>
         </div>
       </footer>
-    </div> 
+    </div>
 
     <script src="script.js"></script>
   </body>

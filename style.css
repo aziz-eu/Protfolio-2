@@ -6,20 +6,43 @@ font-family: 'Nunito', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif; */
-
+/* Utility */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 100px;
+  margin: 0.5rem 0 1rem 0;
 }
 
 .wide-padding {
   padding: 0 15%;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* Hrader Container  */
 
 .header-container {
   background-color: #000;
@@ -44,34 +67,30 @@ body {
   color: #fff;
 }
 /* navbar */
-
-nav {
-  background-color: #000;
-  height: 50px;
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
 }
 
 .logo {
   font-size: 2rem;
 }
 
+.menu {
+  display: flex;
+  font-size: 1rem;
+}
+
 .menu li {
-  display: inline-block;
-  margin-left: 10px;
   position: relative;
-}
-
-.menu li:first-child {
-  margin-left: 0;
-}
-
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
+  margin: 1rem;
 }
 
 .menu li a.active::after {
@@ -81,10 +100,21 @@ nav {
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  bottom: -4px;
   left: 50%;
-  top: 95%;
+  top: 100%;
   transform: translateX(-50%);
+}
+
+/* BURGER MENU */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
 }
 
 /* Intro */
@@ -121,14 +151,6 @@ nav {
 .about-container {
   display: flex;
   margin: 2rem 0;
-}
-
-.line {
-  width: 100px;
-  height: 3px;
-  background-color: #333;
-  border-radius: 100px;
-  margin: 0.5rem 0 1rem 0;
 }
 
 .about-img {
@@ -314,56 +336,93 @@ footer {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   .wide-padding {
     padding: 0 5%;
+  }
+
+  .about-container,
+  .services-column,
+  .row,
+  .contact-content,
+  .form-row {
+    flex-direction: column;
+  }
+
+  .about-container{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .menu li + li {
+    margin-top: 7px;
+  }
+
+  .menu li a.active::after {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
   }
   .header-container {
     height: 100%;
     width: 100%;
-   
   }
   .card {
     width: 100%;
     margin: 0px 0;
   }
-  .banner ,.about-container, .services-column, .row, .contact-content, .form-row{
-   flex-direction: column;
-  }
-
-  .about-text {
-    margin:0;
-    padding: 0;
-    margin-top: 1rem;
-  }
-  
-   .Protfolio-section{
-   clip-path: none;
-   margin: 0;
-   padding: 0;
-   }
-   .protfolio{
-    margin: 1rem;
-   }
-
-   .contact-from{
-    width: 100%;
-   }
-
-   .banner{
+  .banner {
     display: flex;
     justify-content: center;
     min-height: 50vh;
     align-items: center;
     text-align: center;
     justify-content: center;
-   }
+  }
 
-   .banner-img {
+  .banner-img {
     display: none;
-   }
-   .intro{
+  }
+  .intro {
     margin-bottom: 6rem;
-   }
-  
+  }
+
+ 
+
+  .about-text {
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .Protfolio-section {
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+  }
+  .protfolio {
+    margin: 1rem;
+  }
+
+  .contact-from {
+    width: 100%;
+  }
+
+
 }
