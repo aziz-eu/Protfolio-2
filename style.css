@@ -371,6 +371,9 @@ footer {
   .menu li a.active::after {
     display: none;
   }
+  .menu li{
+    margin: 1.5rem;
+  }
 
   input[type="checkbox"]:checked ~ .menu {
     display: block;
